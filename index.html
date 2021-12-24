@@ -12,16 +12,39 @@
 
   gtag('config', 'G-8WVL20K6DB');
 </script>
+<style>
+  a {
+    color:pink;
+    text-decoration: none;
+  }
+  h1{
+      font-size: 250%;
+  }
+  ul {
+    list-style: none; /* Remove default bullets */
+    text-align: left;
+  }
+
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: pink; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+  body{ text-align: center;}
+</style>
     </head>
     <body>
-      <div style="text-align:center"><h1><a href="index.html">식물</h1></a></div>
-      <ol>
-          <li><a href="1.html">베고니아</li></a>
-          <li><a href="2.html">제라늄</li></a>
-          <li><a href="3.html">수국</li></a>
-      </ol>
-      <div style="text-align:center"><img src="index.webp">
-      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/o53_csOQI6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p></div>
+          <h1><a href="index.html" style ="text-decoration:underline">식물</h1></a>
+      <ul>
+          <li><a href="1.html">베고니아</a></li>
+          <li><a href="2.html">제라늄</a></li>
+          <li><a href="3.html">수국</a></li>
+      </ul>
+      <img src="index.webp">
+      <p><iframe width="560" height="315" src="https://www.youtube.com/embed/o53_csOQI6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
       <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

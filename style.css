@@ -1,0 +1,66 @@
+a {
+    color:pink;
+    text-decoration: none;
+  }
+h1{
+    font-size: 250%;
+    border-bottom:3px solid #FF88A7;
+    margin:0;
+    padding:20px;
+    text-align:center;
+  }
+h2{
+color:pink;
+}
+#grid ul {
+  list-style: none;
+  text-align: left; /* Remove default bullets */
+  margin:0;
+  padding-left:30px;
+  border-right:3px solid #FF88A7;
+  }
+
+#grid ul li{
+
+  margin:0;
+  padding-top:20px;
+  width:100px;
+  margin:0;
+
+}
+
+#grid ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: pink; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+#grid{
+  display:grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid #article{
+  padding:25px;
+  margin:0;
+}
+#grid #main{
+  padding:25px;
+  margin:0;
+  text-align:center;
+}
+@media(max-width:800px){
+  #grid{
+    display: block;
+  }
+  #grid ul{
+    border-right:none;
+  }
+  h1{
+    border-bottom:none;
+  }
+}
+body{
+  margin:0;
+}

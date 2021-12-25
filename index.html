@@ -15,7 +15,35 @@
  <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
+      <div id="button">
+      <!--버튼 두개
+      <input type ="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor='black';
+      document.querySelector('body').style.color='white';
+      ">
+      <input type ="button" value="day" onclick="
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      ">
+    -->
+      <!--if문활용 버튼 한개-->
+        <input id="ND" type="button" value="night" onclick="
+        if(document.querySelector('#ND').value==='night'){
+          document.querySelector('body').style.backgroundColor ='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#ND').value = 'day';}
+          else{
+            document.querySelector('body').style.backgroundColor ='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#ND').value='night';
+        }
+        ">
+
+      </div>
+
           <h1><a href="index.html" style ="text-decoration:underline">식물</h1></a>
+
     <div id="grid">
       <ul>
           <li><a href="1.html">베고니아</a></li>

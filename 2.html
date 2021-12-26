@@ -20,14 +20,27 @@
         if(this.value==='night'){
           target.style.backgroundColor ='black';
           target.style.color='white';
-          this.value = 'day';}
+          this.value = 'day';
+
+          var alist =document.querySelectorAll('a');
+          var i=0;
+          while(i < alist.length){
+          alist[i].style.color='white';
+          i++;}
+            }
           else{
-            target.style.backgroundColor ='white';
-            target.style.color='black';
+          target.style.backgroundColor ='white';
+          target.style.color='black';
           this.value='night';
-        }
+
+          var alist =document.querySelectorAll('a');
+          var i=0;
+          while(i < alist.length){
+          alist[i].style.color='pink';
+          i++;
+          }
+          }
         ">
-      </div>
       <h1><a href="index.html">식물</a></h1>
 <div id="grid">
       <ul>

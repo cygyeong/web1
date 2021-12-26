@@ -15,6 +15,19 @@
      <link rel="stylesheet" href="style.css">
     </head>
     <body>
+      <div id="button">
+      <input id="ND" type="button" value="night" onclick="
+        if(document.querySelector('#ND').value==='night'){
+          document.querySelector('body').style.backgroundColor ='black';
+          document.querySelector('body').style.color='white';
+          document.querySelector('#ND').value = 'day';}
+          else{
+            document.querySelector('body').style.backgroundColor ='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#ND').value='night';
+        }
+        ">
+      </div>
       <h1><a href="index.html">식물</a></h1>
 <div id="grid">
       <ul>

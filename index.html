@@ -2,6 +2,8 @@
 <html>
     <head>
       <title>Plant</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="colors.js"></script>
       <meta charset="utf-8">
       <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WVL20K6DB"></script>
@@ -15,44 +17,7 @@
  <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <!--버튼 두개
-      <input type ="button" value="night" onclick="
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';
-      ">
-      <input type ="button" value="day" onclick="
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-      ">
-    -->
-      <!--if문활용 버튼 한개-->
-      <input  type="button" value="night" onclick="
-      var target=document.querySelector('body');
-        if(this.value==='night'){
-          target.style.backgroundColor ='black';
-          target.style.color='white';
-          this.value = 'day';
-
-        var alist =document.querySelectorAll('a');
-        var i=0;
-        while(i < alist.length){
-          alist[i].style.color='white';
-          i++;
-        }
-      }
-          else{
-            target.style.backgroundColor ='white';
-            target.style.color='black';
-            this.value='night';
-
-            var alist =document.querySelectorAll('a');
-            var i=0;
-            while(i < alist.length){
-            alist[i].style.color='pink';
-            i++;
-           }
-          }
-        ">
+          <input  type="button" value="night" onclick="nightDayHandler(this)">
           <h1><a href="index.html" style ="text-decoration:underline">식물</h1></a>
 
     <div id="grid">

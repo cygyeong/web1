@@ -1,49 +1,22 @@
-<!doctype html>
-<html>
-    <head>
-      <title>Plant</title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="colors.js"></script>
-      <meta charset="utf-8">
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8WVL20K6DB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8WVL20K6DB');
-</script>
- <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-          <input  type="button" value="night" onclick="nightDayHandler(this)">
-          <h1><a href="index.html" style ="text-decoration:underline">식물</h1></a>
-
-    <div id="grid">
-      <ul>
-          <li><a href="1.html">베고니아</a></li>
-          <li><a href="2.html">제라늄</a></li>
-          <li><a href="3.html">수국</a></li>
-      </ul>
-      <div id="main">
-    <div class="class"><img src="index.webp"> </div>
-        <div class="class"><iframe width="510" height="340" src="https://www.youtube.com/embed/o53_csOQI6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-
-  </div>
-  </div>
-</div>
-      <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/61c4801e80b2296cfdd31533/1fnjp8u32';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    </body>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <script>
+        let promise = fetch('coffee.jpg');//promise 변수에 fetch()작업으로 반환된 Promise 오브젝트를 저장하고 있다. 지금 오브젝트는 성공도 아니고 실패도 아닌 중간상태를 저장(pending)
+        let promise2 = promise.then(response => response.blob());
+        /*두번째 Promise가 fullfills일 때 반환된 Blob을 매개변수로 전달받는 
+        URL.createObjectURL() 메서드를 실행하고 있다. 이렇게 하면 오브젝트가 가지고 있는 URL이 반환된다. 그런 다음 img 엘리먼트를 만들고 반환된 URL을 src 속성에 지정하여 DOM에 추가한다.*/
+        let promise3 = promise2.then(myBlob=>{
+            let objectURL = URL.createObjectURL(myBlob);
+            let img = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChildd(image);
+        })
+    </script>
+  </body>
+</html>
